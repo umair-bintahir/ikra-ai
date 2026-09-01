@@ -921,3 +921,43 @@ section:nth-child(even) p {
         font-size: 0.9rem;
     }
 }
+
+
+/* HERO SECTION — COLOR CORRECTIONS ONLY */
+
+.hero {
+    background-color: var(--midnight);
+}
+
+.hero-headline {
+    color: var(--warm-white);
+}
+
+.hero-description {
+    color: rgba(246, 244, 238, 0.78);
+}
+
+.cta-button.secondary {
+    color: var(--warm-white);
+    border: 1.5px solid rgba(246, 244, 238, 0.4);
+}
+
+.cta-button.secondary:hover {
+    background-color: var(--warm-white);
+    color: var(--midnight);
+    border: 1.5px solid var(--warm-white);
+    box-shadow: 0 4px 16px rgba(246, 244, 238, 0.15);
+}
+
+.network-lines {
+    stroke: rgba(65, 105, 255, 0.45);
+}
+
+.node-label {
+    fill: var(--warm-white);
+    opacity: 0.9;
+}
+
+.node-label-center {
+    fill: var(--electric-blue);
+}
