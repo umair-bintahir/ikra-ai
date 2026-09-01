@@ -960,3 +960,138 @@ section:nth-child(even) {
         font-size: 0.9rem;
     }
 }
+
+
+/* =========================================
+   IKRA-AI HERO — FINAL VISUAL OVERRIDE
+   ========================================= */
+
+.hero {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 72% 45%, rgba(65, 105, 255, 0.16), transparent 32%),
+        radial-gradient(circle at 90% 80%, rgba(49, 205, 255, 0.08), transparent 28%),
+        #0b1020;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 150px 4rem 80px;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+}
+
+.hero-headline {
+    color: #ffffff;
+    font-size: clamp(3.5rem, 5.4vw, 6rem);
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+    font-weight: 750;
+    max-width: 760px;
+}
+
+.hero-headline .highlight-think {
+    color: #4169ff;
+    text-shadow: 0 0 35px rgba(65, 105, 255, 0.28);
+}
+
+.hero-subheadline {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 590px;
+    margin-top: 2rem;
+}
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.thinking-network {
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    overflow: visible;
+    filter: drop-shadow(0 0 30px rgba(65, 105, 255, 0.16));
+}
+
+.thinking-network .network-line {
+    stroke: rgba(65, 105, 255, 0.34);
+    stroke-width: 1.5;
+}
+
+.thinking-network .node-orbit {
+    fill: #0b1020;
+    stroke: #4169ff;
+    stroke-width: 2;
+}
+
+.thinking-network .node-center {
+    fill: #4169ff;
+    stroke: rgba(255, 255, 255, 0.8);
+    stroke-width: 2;
+    filter: drop-shadow(0 0 15px rgba(65, 105, 255, 0.75));
+}
+
+.thinking-network .node-label {
+    fill: rgba(255, 255, 255, 0.72);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+}
+
+.thinking-network .center-label,
+.thinking-network text {
+    fill: rgba(255, 255, 255, 0.82);
+}
+
+.navbar {
+    background: rgba(11, 16, 32, 0.88);
+    border-bottom: 1px solid rgba(65, 105, 255, 0.16);
+    backdrop-filter: blur(16px);
+}
+
+.navbar .logo {
+    color: #ffffff;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.nav-cta {
+    color: #ffffff;
+    border-color: #4169ff;
+}
+
+@media (max-width: 900px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        padding: 130px 1.5rem 60px;
+        gap: 3rem;
+    }
+
+    .hero-headline {
+        font-size: clamp(3rem, 11vw, 4.5rem);
+    }
+
+    .hero-visual {
+        margin-top: 1rem;
+    }
+
+    .thinking-network {
+        max-width: 480px;
+    }
+}
