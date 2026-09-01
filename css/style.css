@@ -389,5 +389,535 @@ section:nth-child(even) p {
     background-color: rgba(65, 105, 255, 0.05);
     padding: 2.5rem;
     border-radius: 8px;
-    border-left: 4*
-
+    border-left: 4px solid var(--electric-blue);
+    transition: var(--transition);
+}
+
+.problem-point:hover {
+    background-color: rgba(65, 105, 255, 0.1);
+    transform: translateY(-4px);
+}
+
+.problem-point h3 {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.problem-point p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ========================================
+   HOW IKRA WORKS SECTION
+   ======================================== */
+
+.how-ikra-works {
+    background-color: var(--midnight);
+}
+
+.ikra-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem;
+}
+
+.step {
+    background-color: rgba(65, 105, 255, 0.08);
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.step:hover {
+    background-color: rgba(65, 105, 255, 0.15);
+    transform: translateY(-6px);
+}
+
+.step-letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    background-color: var(--electric-blue);
+    color: var(--midnight);
+    font-size: 2.2rem;
+    font-weight: 800;
+    border-radius: 8px;
+}
+
+.step h3 {
+    font-size: 1.4rem;
+    color: var(--electric-blue);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.step p {
+    color: rgba(246, 244, 238, 0.8);
+    line-height: 1.6;
+}
+
+/* ========================================
+   LEARNER JOURNEY SECTION
+   ======================================== */
+
+.learner-journey {
+    background-color: var(--warm-white);
+}
+
+.journey-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.journey-step {
+    background-color: rgba(65, 105, 255, 0.05);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.journey-step:hover {
+    background-color: rgba(65, 105, 255, 0.1);
+    transform: translateY(-4px);
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1rem;
+    background-color: var(--electric-blue);
+    color: var(--midnight);
+    font-size: 1.5rem;
+    font-weight: 800;
+    border-radius: 50%;
+}
+
+.journey-step h3 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.journey-step p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* ========================================
+   FOR SCHOOLS SECTION
+   ======================================== */
+
+.for-schools {
+    background-color: var(--midnight);
+}
+
+.schools-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.benefit {
+    background-color: rgba(65, 105, 255, 0.08);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border-top: 3px solid var(--electric-blue);
+    transition: var(--transition);
+}
+
+.benefit:hover {
+    background-color: rgba(65, 105, 255, 0.15);
+    transform: translateY(-4px);
+}
+
+.benefit h3 {
+    font-size: 1.3rem;
+    color: var(--electric-blue);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.benefit p {
+    color: rgba(246, 244, 238, 0.8);
+    line-height: 1.6;
+}
+
+/* ========================================
+   ANALYTICS SECTION
+   ======================================== */
+
+.analytics {
+    background-color: var(--warm-white);
+}
+
+.analytics-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.feature {
+    background-color: rgba(65, 105, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border-bottom: 3px solid var(--electric-blue);
+    transition: var(--transition);
+}
+
+.feature:hover {
+    background-color: rgba(65, 105, 255, 0.1);
+    transform: translateY(-4px);
+}
+
+.feature h3 {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.feature p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ========================================
+   VISION SECTION
+   ======================================== */
+
+.vision {
+    background-color: var(--midnight);
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.vision-statement {
+    font-size: 1.2rem;
+    color: rgba(246, 244, 238, 0.9);
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+}
+
+.vision-statement:last-of-type {
+    margin-bottom: 0;
+}
+
+/* ========================================
+   PARTNER / INVESTOR CTA SECTION
+   ======================================== */
+
+.partner-cta {
+    background-color: var(--warm-white);
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.cta-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+    background-color: var(--midnight);
+    color: var(--warm-white);
+    padding: 4rem 2rem 2rem;
+    border-top: 1px solid rgba(65, 105, 255, 0.15);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    color: var(--electric-blue);
+}
+
+.footer-section p {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-section a {
+    color: var(--warm-white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    opacity: 0.85;
+    transition: var(--transition);
+}
+
+.footer-section a:hover {
+    opacity: 1;
+    color: var(--electric-blue);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(65, 105, 255, 0.15);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 900px) {
+    .navbar-container {
+        padding: 0 2rem;
+    }
+
+    .nav-links {
+        gap: 2rem;
+        margin-left: 2rem;
+    }
+
+    .hero {
+        padding: 120px 2rem 2rem;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .hero-headline {
+        font-size: clamp(2.8rem, 4vw, 3.5rem);
+    }
+
+    .thinking-network {
+        max-width: 420px;
+    }
+
+    .hero-visual::before {
+        width: 420px;
+        height: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 0 1.5rem;
+    }
+
+    .nav-links,
+    .nav-cta {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .hero {
+        padding: 100px 1.5rem 2rem;
+        min-height: auto;
+    }
+
+    .hero-headline {
+        font-size: 2.2rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .hero-cta {
+        gap: 1rem;
+    }
+
+    .cta-button {
+        width: 100%;
+        padding: 0.9rem 2rem;
+    }
+
+    .thinking-network {
+        max-width: 320px;
+    }
+
+    .hero-visual::before {
+        width: 320px;
+        height: 320px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+
+    .problem-points,
+    .ikra-steps,
+    .journey-steps,
+    .schools-benefits,
+    .analytics-features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .problem-point,
+    .step,
+    .journey-step,
+    .benefit,
+    .feature {
+        padding: 1.75rem;
+    }
+
+    .step-letter {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 80px 1rem 2rem;
+        min-height: auto;
+    }
+
+    .hero-container {
+        gap: 2rem;
+    }
+
+    .hero-headline {
+        font-size: 1.8rem;
+        line-height: 1.15;
+        margin-bottom: 1rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .cta-button {
+        padding: 0.85rem 1.75rem;
+        font-size: 0.95rem;
+    }
+
+    .thinking-network {
+        max-width: 280px;
+    }
+
+    .hero-visual::before {
+        width: 280px;
+        height: 280px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .problem-description {
+        font-size: 1rem;
+    }
+
+    .step h3,
+    .benefit h3,
+    .feature h3,
+    .journey-step h3 {
+        font-size: 1.1rem;
+    }
+
+    .step p,
+    .benefit p,
+    .feature p,
+    .journey-step p {
+        font-size: 0.9rem;
+    }
+
+    .vision-statement {
+        font-size: 1.05rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-description {
+        font-size: 1rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .footer-section h4 {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: 0.9rem;
+    }
+}
