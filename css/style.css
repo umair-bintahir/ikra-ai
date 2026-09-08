@@ -464,578 +464,6 @@ section:nth-child(even) p {
 }
 
 /* ========================================
-   EXPERIENCE IKRA SECTION
-   ======================================== */
-
-.experience-ikra {
-    background-color: var(--warm-white);
-}
-
-.experience-ikra .section-title {
-    font-size: 2.75rem;
-    font-weight: 750;
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-    text-align: center;
-    letter-spacing: -0.02em;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.experience-ikra .section-subtitle {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    text-align: center;
-    margin-bottom: 4rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.experience-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Inquiry Panel (Left) */
-
-.inquiry-panel {
-    background-color: rgba(65, 105, 255, 0.03);
-    border: 1px solid rgba(65, 105, 255, 0.12);
-    border-radius: 12px;
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.inquiry-header {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(65, 105, 255, 0.1);
-}
-
-.inquiry-title {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--electric-blue);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.75rem;
-}
-
-.inquiry-question {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    line-height: 1.4;
-}
-
-.conversation-flow {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    flex: 1;
-}
-
-.message {
-    display: flex;
-    gap: 1rem;
-    animation: fadeInUp 0.6s ease-out;
-}
-
-.message-avatar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--warm-white);
-    flex-shrink: 0;
-}
-
-.ikra-message .message-avatar {
-    background-color: var(--electric-blue);
-}
-
-.learner-message .message-avatar {
-    background-color: rgba(65, 105, 255, 0.2);
-    color: var(--electric-blue);
-}
-
-.message-content {
-    flex: 1;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 8px;
-    padding: 1rem 1.25rem;
-    border: 1px solid rgba(65, 105, 255, 0.08);
-}
-
-.message-content p {
-    font-size: 0.95rem;
-    color: var(--text-primary);
-    line-height: 1.5;
-    margin: 0;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(8px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Progress Panel (Right) */
-
-.progress-panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2.5rem 2rem;
-    background: linear-gradient(135deg, rgba(65, 105, 255, 0.02) 0%, rgba(65, 105, 255, 0.01) 100%);
-    border-radius: 12px;
-    border: 1px solid rgba(65, 105, 255, 0.08);
-    gap: 0;
-}
-
-.progress-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 3.5rem;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-size: 0.9rem;
-}
-
-.progress-stage {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-}
-
-.stage-indicator {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    opacity: 0.4;
-    transition: var(--transition);
-    position: relative;
-    z-index: 2;
-}
-
-.stage-indicator.active {
-    opacity: 1;
-}
-
-.stage-node {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: rgba(65, 105, 255, 0.1);
-    border: 2px solid rgba(65, 105, 255, 0.3);
-    transition: var(--transition);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.stage-indicator.active .stage-node {
-    background-color: rgba(65, 105, 255, 0.2);
-    border-color: var(--electric-blue);
-    box-shadow: 0 0 16px rgba(65, 105, 255, 0.3);
-}
-
-.stage-node::after {
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background-color: var(--electric-blue);
-    border-radius: 50%;
-    opacity: 0;
-    transition: var(--transition);
-}
-
-.stage-indicator.active .stage-node::after {
-    opacity: 1;
-}
-
-.stage-label {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    text-align: center;
-    letter-spacing: 0.3px;
-}
-
-.stage-indicator.active .stage-label {
-    color: var(--electric-blue);
-    font-weight: 700;
-}
-
-.stage-connector {
-    width: 2px;
-    height: 48px;
-    background: linear-gradient(to bottom, var(--electric-blue), rgba(65, 105, 255, 0.15));
-    opacity: 0.3;
-    margin: 0.75rem 0;
-    transition: var(--transition);
-}
-
-.progress-stage:last-child .stage-connector {
-    display: none;
-}
-
-.progress-note {
-    margin-top: 2.5rem;
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    font-style: italic;
-    text-align: center;
-    letter-spacing: 0.3px;
-}
-
-/* Responsive Design for Progress Panel */
-
-@media (max-width: 900px) {
-    .progress-panel {
-        flex-direction: row;
-        justify-content: center;
-        align-items: stretch;
-        gap: 0;
-        padding: 2rem;
-        background: transparent;
-        border: none;
-    }
-
-    .progress-title {
-        display: none;
-    }
-
-    .progress-stage {
-        flex-direction: row;
-        align-items: center;
-        gap: 0;
-        flex: 0 1 auto;
-    }
-
-    .stage-indicator {
-        gap: 0.5rem;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .stage-label {
-        white-space: nowrap;
-        font-size: 0.8rem;
-    }
-
-    .stage-connector {
-        width: 32px;
-        height: 2px;
-        margin: 0 1rem;
-        background: linear-gradient(to right, var(--electric-blue), rgba(65, 105, 255, 0.15));
-    }
-
-    .progress-stage:last-child .stage-connector {
-        display: none;
-    }
-
-    .progress-note {
-        position: absolute;
-        bottom: 1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-top: 0;
-        width: 90%;
-    }
-
-    .experience-layout {
-        position: relative;
-    }
-}
-
-@media (max-width: 768px) {
-    .progress-panel {
-        flex-direction: column;
-        gap: 1.5rem;
-        padding: 2rem;
-        background: linear-gradient(135deg, rgba(65, 105, 255, 0.02) 0%, rgba(65, 105, 255, 0.01) 100%);
-        border: 1px solid rgba(65, 105, 255, 0.08);
-    }
-
-    .progress-title {
-        display: block;
-        margin-bottom: 2rem;
-    }
-
-    .progress-stage {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .stage-indicator {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .stage-label {
-        font-size: 0.8rem;
-    }
-
-    .stage-connector {
-        width: 2px;
-        height: 40px;
-        margin: 0.75rem 0;
-    }
-
-    .progress-note {
-        position: static;
-        transform: none;
-        width: 100%;
-        margin-top: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .progress-panel {
-        padding: 1.5rem;
-    }
-
-    .progress-title {
-        font-size: 0.85rem;
-        margin-bottom: 1.75rem;
-    }
-
-    .stage-node {
-        width: 28px;
-        height: 28px;
-        border-width: 1.5px;
-    }
-
-    .stage-node::after {
-        width: 6px;
-        height: 6px;
-    }
-
-    .stage-label {
-        font-size: 0.75rem;
-    }
-
-    .stage-connector {
-        height: 36px;
-        margin: 0.5rem 0;
-    }
-
-    .progress-note {
-        font-size: 0.75rem;
-        margin-top: 1rem;
-    }
-}
-
-/* Responsive Design */
-
-@media (max-width: 900px) {
-    .experience-layout {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-
-    .experience-ikra .section-title {
-        font-size: 2.2rem;
-    }
-
-    .inquiry-question {
-        font-size: 1.2rem;
-    }
-
-    .progress-panel {
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        gap: 2rem;
-    }
-
-    .progress-stage {
-        flex-direction: row;
-        gap: 1rem;
-    }
-
-    .stage-connector {
-        width: 40px;
-        height: 2px;
-        margin: 0 1rem;
-    }
-
-    .progress-stage:last-child .stage-connector {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .experience-ikra {
-        padding: 4rem 1.5rem;
-    }
-
-    .experience-ikra .section-title {
-        font-size: 1.8rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .experience-ikra .section-subtitle {
-        font-size: 1rem;
-        margin-bottom: 2.5rem;
-    }
-
-    .experience-layout {
-        gap: 2rem;
-    }
-
-    .inquiry-panel,
-    .progress-panel {
-        padding: 2rem;
-    }
-
-    .inquiry-question {
-        font-size: 1.1rem;
-    }
-
-    .conversation-flow {
-        gap: 1.25rem;
-    }
-
-    .message-content {
-        padding: 0.85rem 1rem;
-    }
-
-    .message-content p {
-        font-size: 0.9rem;
-    }
-
-    .progress-title {
-        font-size: 1.1rem;
-        margin-bottom: 2rem;
-    }
-
-    .stage-icon {
-        font-size: 2rem;
-    }
-
-    .stage-label {
-        font-size: 0.85rem;
-    }
-
-    .progress-panel {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .progress-stage {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .stage-connector {
-        width: 2px;
-        height: 40px;
-        margin: 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .experience-ikra {
-        padding: 3rem 1rem;
-    }
-
-    .experience-ikra .section-title {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .experience-ikra .section-subtitle {
-        font-size: 0.95rem;
-        margin-bottom: 2rem;
-    }
-
-    .experience-layout {
-        gap: 1.5rem;
-    }
-
-    .inquiry-panel,
-    .progress-panel {
-        padding: 1.5rem;
-    }
-
-    .inquiry-title {
-        font-size: 0.85rem;
-    }
-
-    .inquiry-question {
-        font-size: 1rem;
-    }
-
-    .conversation-flow {
-        gap: 1rem;
-    }
-
-    .message-avatar {
-        width: 36px;
-        height: 36px;
-        font-size: 0.7rem;
-    }
-
-    .message-content {
-        padding: 0.75rem 1rem;
-    }
-
-    .message-content p {
-        font-size: 0.85rem;
-    }
-
-    .progress-title {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .stage-icon {
-        font-size: 1.75rem;
-    }
-
-    .stage-label {
-        font-size: 0.8rem;
-    }
-
-    .progress-stage {
-        gap: 0.75rem;
-    }
-
-    .stage-connector {
-        height: 30px;
-    }
-
-    .progress-note {
-        font-size: 0.8rem;
-    }
-}
-
-/* ========================================
    FOR SCHOOLS SECTION
    ======================================== */
 
@@ -1043,788 +471,287 @@ section:nth-child(even) p {
     background-color: var(--midnight);
 }
 
-.schools-benefits {
+.for-schools .section-title {
+    color: var(--warm-white);
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+}
+
+.for-schools .section-subtitle {
+    color: rgba(246, 244, 238, 0.7);
+    margin-bottom: 4rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.for-schools-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Benefit Cards */
+
+.benefit-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2.5rem;
+    margin-bottom: 5rem;
 }
 
-.benefit {
-    background-color: rgba(65, 105, 255, 0.08);
+.benefit-card {
+    background: linear-gradient(135deg, rgba(65, 105, 255, 0.12) 0%, rgba(65, 105, 255, 0.06) 100%);
+    border: 1px solid rgba(65, 105, 255, 0.2);
+    border-radius: 10px;
     padding: 2.5rem;
-    border-radius: 8px;
-    border-top: 3px solid var(--electric-blue);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     transition: var(--transition);
 }
 
-.benefit:hover {
+.benefit-card:hover {
+    background: linear-gradient(135deg, rgba(65, 105, 255, 0.18) 0%, rgba(65, 105, 255, 0.1) 100%);
+    border-color: rgba(65, 105, 255, 0.3);
+    transform: translateY(-4px);
+}
+
+.benefit-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.benefit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
     background-color: rgba(65, 105, 255, 0.15);
-    transform: translateY(-4px);
-}
-
-.benefit h3 {
-    font-size: 1.3rem;
-    color: var(--electric-blue);
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
     font-weight: 700;
+    color: var(--electric-blue);
+    flex-shrink: 0;
+    border: 1.5px solid rgba(65, 105, 255, 0.3);
 }
 
-.benefit p {
-    color: rgba(246, 244, 238, 0.8);
+.benefit-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--warm-white);
+    line-height: 1.3;
+}
+
+.benefit-card p {
+    font-size: 0.95rem;
+    color: rgba(246, 244, 238, 0.75);
     line-height: 1.6;
+    margin: 0;
 }
 
-/* ========================================
-   ANALYTICS SECTION
-   ======================================== */
+/* Dashboard Panel */
 
-.analytics {
-    background-color: var(--warm-white);
+.dashboard-panel {
+    background: linear-gradient(135deg, rgba(65, 105, 255, 0.08) 0%, rgba(65, 105, 255, 0.03) 100%);
+    border: 1px solid rgba(65, 105, 255, 0.15);
+    border-radius: 12px;
+    padding: 3rem;
 }
 
-.analytics-features {
+.dashboard-header {
+    margin-bottom: 2.5rem;
+}
+
+.dashboard-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--warm-white);
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-note {
+    font-size: 0.85rem;
+    color: rgba(246, 244, 238, 0.5);
+    font-style: italic;
+    margin: 0;
+}
+
+.dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2.5rem;
 }
 
-.feature {
-    background-color: rgba(65, 105, 255, 0.05);
-    padding: 2.5rem;
-    border-radius: 8px;
-    border-bottom: 3px solid var(--electric-blue);
-    transition: var(--transition);
-}
-
-.feature:hover {
-    background-color: rgba(65, 105, 255, 0.1);
-    transform: translateY(-4px);
-}
-
-.feature h3 {
-    font-size: 1.3rem;
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.feature p {
-    color: var(--text-secondary);
-    line-height: 1.6;
-}
-
-/* ========================================
-   VISION SECTION
-   ======================================== */
-
-.vision {
-    background-color: var(--midnight);
-    text-align: center;
-    padding: 6rem 0;
-}
-
-.vision-statement {
-    font-size: 1.2rem;
-    color: rgba(246, 244, 238, 0.9);
-    line-height: 1.8;
-    max-width: 900px;
-    margin: 0 auto 2rem;
-}
-
-.vision-statement:last-of-type {
-    margin-bottom: 0;
-}
-
-/* ========================================
-   PARTNER / INVESTOR CTA SECTION
-   ======================================== */
-
-.partner-cta {
-    background-color: var(--warm-white);
-    padding: 6rem 2rem;
-    text-align: center;
-}
-
-.cta-description {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    margin-bottom: 2.5rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
-}
-
-.cta-buttons {
+.dashboard-card {
     display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-/* ========================================
-   FOOTER
-   ======================================== */
-
-.footer {
-    background-color: var(--midnight);
-    color: var(--warm-white);
-    padding: 4rem 2rem 2rem;
-    border-top: 1px solid rgba(65, 105, 255, 0.15);
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 3rem;
-    margin-bottom: 2rem;
-}
-
-.footer-section h4 {
-    font-size: 1.1rem;
-    margin-bottom: 1.2rem;
-    font-weight: 700;
-    color: var(--electric-blue);
-}
-
-.footer-section p {
-    font-size: 0.95rem;
-    opacity: 0.85;
-    line-height: 1.6;
-}
-
-.footer-section ul {
-    list-style: none;
-}
-
-.footer-section ul li {
-    margin-bottom: 0.75rem;
-}
-
-.footer-section a {
-    color: var(--warm-white);
-    text-decoration: none;
-    font-size: 0.95rem;
-    opacity: 0.85;
-    transition: var(--transition);
-}
-
-.footer-section a:hover {
-    opacity: 1;
-    color: var(--electric-blue);
-}
-
-.footer-bottom {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(65, 105, 255, 0.15);
+.metric-label {
     font-size: 0.9rem;
-    opacity: 0.7;
-}
-
-/* ========================================
-   RESPONSIVE DESIGN
-   ======================================== */
-
-@media (max-width: 900px) {
-    .navbar-container {
-        padding: 0 2rem;
-    }
-
-    .nav-links {
-        gap: 2rem;
-        margin-left: 2rem;
-    }
-
-    .hero {
-        padding: 120px 2rem 2rem;
-    }
-
-    .hero-container {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-
-    .hero-headline {
-        font-size: clamp(2.8rem, 4vw, 3.5rem);
-    }
-
-    .thinking-network {
-        max-width: 420px;
-    }
-
-    .hero-visual::before {
-        width: 420px;
-        height: 420px;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar-container {
-        padding: 0 1.5rem;
-    }
-
-    .nav-links,
-    .nav-cta {
-        display: none;
-    }
-
-    .logo {
-        font-size: 1.2rem;
-    }
-
-    .hero {
-        padding: 100px 1.5rem 2rem;
-        min-height: auto;
-    }
-
-    .hero-headline {
-        font-size: 2.2rem;
-        margin-bottom: 1.25rem;
-    }
-
-    .hero-description {
-        font-size: 1rem;
-        margin-bottom: 1.75rem;
-    }
-
-    .hero-cta {
-        gap: 1rem;
-    }
-
-    .cta-button {
-        width: 100%;
-        padding: 0.9rem 2rem;
-    }
-
-    .thinking-network {
-        max-width: 320px;
-    }
-
-    .hero-visual::before {
-        width: 320px;
-        height: 320px;
-    }
-
-    .section-title {
-        font-size: 2rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .section-subtitle {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    section {
-        padding: 3rem 0;
-    }
-
-    .problem-points,
-    .ikra-steps,
-    .journey-steps,
-    .schools-benefits,
-    .analytics-features {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .problem-point,
-    .step,
-    .journey-step,
-    .benefit,
-    .feature {
-        padding: 1.75rem;
-    }
-
-    .step-letter {
-        width: 60px;
-        height: 60px;
-        font-size: 2rem;
-    }
-
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        padding: 80px 1rem 2rem;
-        min-height: auto;
-    }
-
-    .hero-container {
-        gap: 2rem;
-    }
-
-    .hero-headline {
-        font-size: 1.8rem;
-        line-height: 1.15;
-        margin-bottom: 1rem;
-    }
-
-    .hero-description {
-        font-size: 0.95rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .hero-cta {
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    .cta-button {
-        padding: 0.85rem 1.75rem;
-        font-size: 0.95rem;
-    }
-
-    .thinking-network {
-        max-width: 280px;
-    }
-
-    .hero-visual::before {
-        width: 280px;
-        height: 280px;
-    }
-
-    .section-title {
-        font-size: 1.6rem;
-    }
-
-    .section-subtitle {
-        font-size: 0.95rem;
-    }
-
-    .problem-description {
-        font-size: 1rem;
-    }
-
-    .step h3,
-    .benefit h3,
-    .feature h3,
-    .journey-step h3 {
-        font-size: 1.1rem;
-    }
-
-    .step p,
-    .benefit p,
-    .feature p,
-    .journey-step p {
-        font-size: 0.9rem;
-    }
-
-    .vision-statement {
-        font-size: 1.05rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .cta-description {
-        font-size: 1rem;
-        margin-bottom: 1.75rem;
-    }
-
-    .footer-section h4 {
-        font-size: 1rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .footer-section p,
-    .footer-section a {
-        font-size: 0.9rem;
-    }
-}
-
-
-/* HERO SECTION — COLOR CORRECTIONS ONLY */
-
-.hero {
-    background-color: var(--midnight);
-}
-
-.hero-headline {
+    font-weight: 600;
     color: var(--warm-white);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
 }
 
-.hero-description {
-    color: rgba(246, 244, 238, 0.78);
-}
-
-.cta-button.secondary {
-    color: var(--warm-white);
-    border: 1.5px solid rgba(246, 244, 238, 0.4);
-}
-
-.cta-button.secondary:hover {
-    background-color: var(--warm-white);
-    color: var(--midnight);
-    border: 1.5px solid var(--warm-white);
-    box-shadow: 0 4px 16px rgba(246, 244, 238, 0.15);
-}
-
-.network-lines {
-    stroke: rgba(65, 105, 255, 0.45);
-}
-
-.node-label {
-    fill: var(--warm-white);
-    opacity: 0.9;
-}
-
-.node-label-center {
-    fill: var(--electric-blue);
-}
-
-
-/* ========================================
-   WHY IKRA SECTION
-   ======================================== */
-
-.why-ikra {
-    background-color: var(--warm-white);
-    padding: 6rem 2rem;
-}
-
-.why-ikra .section-title {
-    font-size: 2.75rem;
-    font-weight: 750;
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-    text-align: center;
-    letter-spacing: -0.02em;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.why-ikra .section-subtitle {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    text-align: center;
-    margin-bottom: 4rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.comparison-visual {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    margin-bottom: 4rem;
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.pathway {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.pathway-label {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 2.5rem;
-    text-align: center;
-}
-
-.ikra-path .pathway-label {
-    color: var(--electric-blue);
-}
-
-.flow-diagram {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.traditional-path .flow-diagram {
-    opacity: 0.6;
-}
-
-.ikra-flow {
-    flex-direction: column;
-    gap: 0;
-    align-items: center;
+.metric-bar {
+    height: 8px;
+    background-color: rgba(65, 105, 255, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
     position: relative;
 }
 
-.flow-step {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.flow-node {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 0.5px;
-    line-height: 1.2;
-    padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    background-color: #e8e8e8;
-    color: #888888;
-}
-
-.flow-arrow {
-    font-size: 1.5rem;
-    color: #cccccc;
-    font-weight: 700;
-}
-
-.flow-row {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 1.5rem 0;
-}
-
-.flow-row-left {
-    justify-content: flex-start;
-    padding-left: 3rem;
-}
-
-.flow-row-right {
-    justify-content: flex-end;
-    padding-right: 3rem;
-}
-
-.flow-connector {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    padding: 0 2rem;
-}
-
-.flow-connector svg {
-    width: 40px;
+.metric-fill {
     height: 100%;
+    background: linear-gradient(90deg, var(--electric-blue) 0%, rgba(65, 105, 255, 0.8) 100%);
+    border-radius: 4px;
+    animation: barGrow 1.5s ease-out 0.3s backwards;
 }
 
-.ikra-node {
-    background: linear-gradient(135deg, var(--electric-blue) 0%, rgba(65, 105, 255, 0.8) 100%);
-    color: var(--warm-white);
-    width: 110px;
-    height: 110px;
-    font-size: 0.9rem;
-    box-shadow: 0 4px 16px rgba(65, 105, 255, 0.25);
-    transition: var(--transition);
+@keyframes barGrow {
+    from {
+        width: 0 !important;
+        opacity: 0;
+    }
+    to {
+        width: 100% !important;
+        opacity: 1;
+    }
 }
 
-.ikra-node:hover {
-    box-shadow: 0 6px 24px rgba(65, 105, 255, 0.4);
-    transform: scale(1.05);
-}
-
-.outcome-statement {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
-    border-top: 2px solid rgba(65, 105, 255, 0.15);
-}
-
-.outcome-line {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-.outcome-highlight {
-    font-size: 1.4rem;
+.metric-value {
+    font-size: 1.35rem;
     font-weight: 750;
     color: var(--electric-blue);
-    line-height: 1.6;
+    text-align: left;
 }
 
-/* Responsive Design for Why IKRA */
+/* Responsive Design for For Schools */
 
 @media (max-width: 900px) {
-    .comparison-visual {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        margin-bottom: 3rem;
+    .benefit-cards {
+        gap: 2rem;
+        margin-bottom: 4rem;
     }
 
-    .why-ikra .section-title {
-        font-size: 2.2rem;
+    .dashboard-panel {
+        padding: 2.5rem;
     }
 
-    .pathway-label {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-    }
-
-    .flow-diagram {
-        gap: 1.25rem;
-    }
-
-    .flow-node {
-        width: 90px;
-        height: 90px;
-        font-size: 0.8rem;
-    }
-
-    .ikra-node {
-        width: 100px;
-        height: 100px;
-    }
-
-    .flow-row-left,
-    .flow-row-right {
-        justify-content: center;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .outcome-line,
-    .outcome-highlight {
-        font-size: 1.2rem;
+    .dashboard-grid {
+        gap: 2rem;
     }
 }
 
 @media (max-width: 768px) {
-    .why-ikra {
+    .for-schools {
         padding: 4rem 1.5rem;
     }
 
-    .why-ikra .section-title {
+    .for-schools .section-title {
         font-size: 1.8rem;
         margin-bottom: 0.75rem;
     }
 
-    .why-ikra .section-subtitle {
+    .for-schools .section-subtitle {
         font-size: 1rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 3rem;
     }
 
-    .comparison-visual {
-        gap: 2rem;
-        margin-bottom: 2.5rem;
+    .benefit-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
     }
 
-    .pathway-label {
+    .benefit-card {
+        padding: 2rem;
+    }
+
+    .benefit-card h3 {
         font-size: 1.1rem;
-        margin-bottom: 1.5rem;
     }
 
-    .flow-diagram {
-        gap: 1rem;
+    .benefit-card p {
+        font-size: 0.9rem;
     }
 
-    .flow-node {
-        width: 80px;
-        height: 80px;
-        font-size: 0.75rem;
+    .dashboard-panel {
+        padding: 2rem;
     }
 
-    .ikra-node {
-        width: 90px;
-        height: 90px;
+    .dashboard-title {
+        font-size: 1.1rem;
     }
 
-    .flow-row {
-        padding: 1.25rem 0;
+    .dashboard-grid {
+        gap: 1.75rem;
     }
 
-    .flow-connector {
-        height: 50px;
+    .metric-label {
+        font-size: 0.85rem;
     }
 
-    .flow-connector svg {
-        width: 35px;
-    }
-
-    .outcome-statement {
-        padding: 2rem 1.5rem;
-    }
-
-    .outcome-line,
-    .outcome-highlight {
-        font-size: 1.05rem;
+    .metric-value {
+        font-size: 1.2rem;
     }
 }
 
 @media (max-width: 480px) {
-    .why-ikra {
+    .for-schools {
         padding: 3rem 1rem;
     }
 
-    .why-ikra .section-title {
+    .for-schools .section-title {
         font-size: 1.5rem;
-        margin-bottom: 0.5rem;
     }
 
-    .why-ikra .section-subtitle {
+    .for-schools .section-subtitle {
         font-size: 0.95rem;
         margin-bottom: 2rem;
     }
 
-    .comparison-visual {
-        gap: 1.5rem;
-        margin-bottom: 2rem;
+    .benefit-card {
+        padding: 1.5rem;
     }
 
-    .pathway-label {
+    .benefit-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.3rem;
+    }
+
+    .benefit-card h3 {
         font-size: 1rem;
-        margin-bottom: 1.25rem;
     }
 
-    .flow-diagram {
-        gap: 0.75rem;
+    .benefit-card p {
+        font-size: 0.85rem;
     }
 
-    .flow-node {
-        width: 70px;
-        height: 70px;
-        font-size: 0.7rem;
+    .dashboard-panel {
+        padding: 1.5rem;
     }
 
-    .ikra-node {
-        width: 80px;
-        height: 80px;
+    .dashboard-title {
+        font-size: 1rem;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .metric-label {
         font-size: 0.8rem;
     }
 
-    .flow-row {
-        padding: 1rem 0;
-    }
-
-    .flow-connector {
-        height: 45px;
-        padding: 0 1rem;
-    }
-
-    .flow-connector svg {
-        width: 30px;
-    }
-
-    .outcome-statement {
-        padding: 1.5rem 1rem;
-    }
-
-    .outcome-line,
-    .outcome-highlight {
-        font-size: 0.95rem;
+    .metric-value {
+        font-size: 1rem;
     }
 }
