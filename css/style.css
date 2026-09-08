@@ -530,11 +530,17 @@ section:nth-child(even) p {
     height: 50px;
     border-radius: 8px;
     background-color: rgba(65, 105, 255, 0.15);
-    font-size: 1.5rem;
-    font-weight: 700;
     color: var(--electric-blue);
     flex-shrink: 0;
     border: 1.5px solid rgba(65, 105, 255, 0.3);
+    transition: var(--transition);
+}
+
+.benefit-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .benefit-card h3 {
