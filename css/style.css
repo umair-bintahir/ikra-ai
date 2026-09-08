@@ -1018,6 +1018,10 @@ section:nth-child(even) p {
     text-align: center;
 }
 
+.ikra-path .pathway-label {
+    color: var(--electric-blue);
+}
+
 .flow-diagram {
     display: flex;
     flex-direction: row;
@@ -1028,6 +1032,13 @@ section:nth-child(even) p {
 
 .traditional-path .flow-diagram {
     opacity: 0.6;
+}
+
+.ikra-flow {
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    position: relative;
 }
 
 .flow-step {
@@ -1060,13 +1071,34 @@ section:nth-child(even) p {
     font-weight: 700;
 }
 
-.ikra-path .pathway-label {
-    color: var(--electric-blue);
+.flow-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1.5rem 0;
 }
 
-.ikra-flow {
-    flex-direction: column;
-    gap: 1rem;
+.flow-row-left {
+    justify-content: flex-start;
+    padding-left: 3rem;
+}
+
+.flow-row-right {
+    justify-content: flex-end;
+    padding-right: 3rem;
+}
+
+.flow-connector {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+.flow-connector svg {
+    width: 40px;
+    height: 100%;
 }
 
 .ikra-node {
@@ -1082,13 +1114,6 @@ section:nth-child(even) p {
 .ikra-node:hover {
     box-shadow: 0 6px 24px rgba(65, 105, 255, 0.4);
     transform: scale(1.05);
-}
-
-.ikra-arrow {
-    color: var(--electric-blue);
-    opacity: 0.7;
-    font-size: 1.75rem;
-    transition: var(--transition);
 }
 
 .outcome-statement {
@@ -1147,6 +1172,13 @@ section:nth-child(even) p {
         height: 100px;
     }
 
+    .flow-row-left,
+    .flow-row-right {
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .outcome-line,
     .outcome-highlight {
         font-size: 1.2rem;
@@ -1189,21 +1221,24 @@ section:nth-child(even) p {
     }
 
     .ikra-node {
-        width: 85px;
-        height: 85px;
+        width: 90px;
+        height: 90px;
     }
 
-    .flow-arrow {
-        font-size: 1.25rem;
+    .flow-row {
+        padding: 1.25rem 0;
     }
 
-    .ikra-arrow {
-        font-size: 1.5rem;
+    .flow-connector {
+        height: 50px;
+    }
+
+    .flow-connector svg {
+        width: 35px;
     }
 
     .outcome-statement {
         padding: 2rem 1.5rem;
-        border-top: 2px solid rgba(65, 105, 255, 0.15);
     }
 
     .outcome-line,
@@ -1248,17 +1283,22 @@ section:nth-child(even) p {
     }
 
     .ikra-node {
-        width: 75px;
-        height: 75px;
+        width: 80px;
+        height: 80px;
         font-size: 0.8rem;
     }
 
-    .flow-arrow {
-        font-size: 1.1rem;
+    .flow-row {
+        padding: 1rem 0;
     }
 
-    .ikra-arrow {
-        font-size: 1.25rem;
+    .flow-connector {
+        height: 45px;
+        padding: 0 1rem;
+    }
+
+    .flow-connector svg {
+        width: 30px;
     }
 
     .outcome-statement {
