@@ -464,57 +464,392 @@ section:nth-child(even) p {
 }
 
 /* ========================================
-   LEARNER JOURNEY SECTION
+   EXPERIENCE IKRA SECTION
    ======================================== */
 
-.learner-journey {
+.experience-ikra {
     background-color: var(--warm-white);
 }
 
-.journey-steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 2rem;
-}
-
-.journey-step {
-    background-color: rgba(65, 105, 255, 0.05);
-    padding: 2rem;
-    border-radius: 8px;
+.experience-ikra .section-title {
+    font-size: 2.75rem;
+    font-weight: 750;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
     text-align: center;
-    transition: var(--transition);
+    letter-spacing: -0.02em;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.journey-step:hover {
-    background-color: rgba(65, 105, 255, 0.1);
-    transform: translateY(-4px);
+.experience-ikra .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.step-number {
+.experience-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Inquiry Panel (Left) */
+
+.inquiry-panel {
+    background-color: rgba(65, 105, 255, 0.03);
+    border: 1px solid rgba(65, 105, 255, 0.12);
+    border-radius: 12px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.inquiry-header {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(65, 105, 255, 0.1);
+}
+
+.inquiry-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--electric-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+}
+
+.inquiry-question {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.conversation-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.message {
+    display: flex;
+    gap: 1rem;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.message-avatar {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
-    margin: 0 auto 1rem;
-    background-color: var(--electric-blue);
-    color: var(--midnight);
-    font-size: 1.5rem;
-    font-weight: 800;
-    border-radius: 50%;
-}
-
-.journey-step h3 {
-    font-size: 1.2rem;
-    color: var(--text-primary);
-    margin-bottom: 0.75rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 0.75rem;
     font-weight: 700;
+    color: var(--warm-white);
+    flex-shrink: 0;
 }
 
-.journey-step p {
-    color: var(--text-secondary);
-    line-height: 1.6;
+.ikra-message .message-avatar {
+    background-color: var(--electric-blue);
+}
+
+.learner-message .message-avatar {
+    background-color: rgba(65, 105, 255, 0.2);
+    color: var(--electric-blue);
+}
+
+.message-content {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(65, 105, 255, 0.08);
+}
+
+.message-content p {
     font-size: 0.95rem;
+    color: var(--text-primary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Progress Panel (Right) */
+
+.progress-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+}
+
+.progress-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.progress-stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.stage-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    opacity: 0.5;
+    transition: var(--transition);
+}
+
+.stage-indicator.active {
+    opacity: 1;
+}
+
+.stage-icon {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stage-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.stage-connector {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--electric-blue), rgba(65, 105, 255, 0.2));
+    opacity: 0.5;
+}
+
+.progress-stage:last-child .stage-connector {
+    display: none;
+}
+
+.progress-note {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    text-align: center;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+    .experience-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .experience-ikra .section-title {
+        font-size: 2.2rem;
+    }
+
+    .inquiry-question {
+        font-size: 1.2rem;
+    }
+
+    .progress-panel {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .progress-stage {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .stage-connector {
+        width: 40px;
+        height: 2px;
+        margin: 0 1rem;
+    }
+
+    .progress-stage:last-child .stage-connector {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .experience-ikra {
+        padding: 4rem 1.5rem;
+    }
+
+    .experience-ikra .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .experience-ikra .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .experience-layout {
+        gap: 2rem;
+    }
+
+    .inquiry-panel,
+    .progress-panel {
+        padding: 2rem;
+    }
+
+    .inquiry-question {
+        font-size: 1.1rem;
+    }
+
+    .conversation-flow {
+        gap: 1.25rem;
+    }
+
+    .message-content {
+        padding: 0.85rem 1rem;
+    }
+
+    .message-content p {
+        font-size: 0.9rem;
+    }
+
+    .progress-title {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .stage-icon {
+        font-size: 2rem;
+    }
+
+    .stage-label {
+        font-size: 0.85rem;
+    }
+
+    .progress-panel {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .progress-stage {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .stage-connector {
+        width: 2px;
+        height: 40px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-ikra {
+        padding: 3rem 1rem;
+    }
+
+    .experience-ikra .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .experience-ikra .section-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+
+    .experience-layout {
+        gap: 1.5rem;
+    }
+
+    .inquiry-panel,
+    .progress-panel {
+        padding: 1.5rem;
+    }
+
+    .inquiry-title {
+        font-size: 0.85rem;
+    }
+
+    .inquiry-question {
+        font-size: 1rem;
+    }
+
+    .conversation-flow {
+        gap: 1rem;
+    }
+
+    .message-avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 0.7rem;
+    }
+
+    .message-content {
+        padding: 0.75rem 1rem;
+    }
+
+    .message-content p {
+        font-size: 0.85rem;
+    }
+
+    .progress-title {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .stage-icon {
+        font-size: 1.75rem;
+    }
+
+    .stage-label {
+        font-size: 0.8rem;
+    }
+
+    .progress-stage {
+        gap: 0.75rem;
+    }
+
+    .stage-connector {
+        height: 30px;
+    }
+
+    .progress-note {
+        font-size: 0.8rem;
+    }
 }
 
 /* ========================================
