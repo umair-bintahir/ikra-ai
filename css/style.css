@@ -761,3 +761,300 @@ section:nth-child(even) p {
         font-size: 1rem;
     }
 }
+
+
+/* ========================================
+   ANALYTICS & OUTCOMES SECTION
+   ======================================== */
+
+.analytics-outcomes {
+    background-color: var(--warm-white);
+    padding: 7rem 0;
+}
+
+.analytics-outcomes .section-title {
+    color: var(--text-primary);
+    font-size: clamp(2.3rem, 4vw, 3.4rem);
+    max-width: 850px;
+    margin: 0 auto 1.25rem;
+    line-height: 1.15;
+}
+
+.analytics-outcomes .section-subtitle {
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    line-height: 1.7;
+}
+
+/* Main Analytics Layout */
+
+.analytics-product {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(300px, 0.8fr);
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+/* Main Development Panel */
+
+.analytics-main {
+    background-color: #ffffff;
+    border: 1px solid rgba(65, 105, 255, 0.16);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 18px 50px rgba(11, 16, 32, 0.07);
+}
+
+.analytics-panel-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.analytics-eyebrow {
+    display: block;
+    color: var(--electric-blue);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.45rem;
+}
+
+.analytics-panel-header h3,
+.analytics-insight-header h3 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.illustrative-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(65, 105, 255, 0.25);
+    background-color: rgba(65, 105, 255, 0.06);
+    color: var(--electric-blue);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+/* Thinking Development Tracks */
+
+.thinking-trends {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.trend-item {
+    width: 100%;
+}
+
+.trend-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.85rem;
+}
+
+.trend-top > span:first-child {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.trend-status {
+    color: var(--electric-blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.development-track {
+    display: grid;
+    grid-template-columns: 12px 1fr 12px 1fr 12px 1fr 12px;
+    align-items: center;
+    width: 100%;
+}
+
+.development-node {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid rgba(65, 105, 255, 0.25);
+    background-color: #ffffff;
+    position: relative;
+    z-index: 2;
+}
+
+.development-node.active {
+    border-color: var(--electric-blue);
+    background-color: var(--electric-blue);
+    box-shadow: 0 0 0 5px rgba(65, 105, 255, 0.08);
+}
+
+.development-line {
+    height: 2px;
+    background-color: rgba(65, 105, 255, 0.14);
+}
+
+.development-line.active {
+    background: linear-gradient(
+        90deg,
+        var(--electric-blue),
+        rgba(65, 105, 255, 0.55)
+    );
+}
+
+.development-axis {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(20, 24, 33, 0.08);
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+}
+
+/* Educator Insight Panel */
+
+.analytics-insights {
+    background-color: var(--midnight);
+    border: 1px solid rgba(65, 105, 255, 0.2);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 18px 50px rgba(11, 16, 32, 0.1);
+}
+
+.analytics-insight-header {
+    margin-bottom: 2rem;
+}
+
+.analytics-insight-header h3 {
+    color: var(--warm-white);
+    line-height: 1.4;
+}
+
+.insight-card {
+    display: grid;
+    grid-template-columns: 10px 1fr;
+    gap: 1rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(246, 244, 238, 0.1);
+}
+
+.insight-marker {
+    width: 8px;
+    height: 8px;
+    margin-top: 0.45rem;
+    border-radius: 50%;
+    background-color: var(--electric-blue);
+    box-shadow: 0 0 0 5px rgba(65, 105, 255, 0.1);
+}
+
+.insight-label {
+    display: block;
+    color: var(--electric-blue);
+    font-size: 0.76rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.55rem;
+}
+
+.analytics-insights .insight-card p {
+    color: rgba(246, 244, 238, 0.75);
+    font-size: 0.9rem;
+    line-height: 1.65;
+    margin: 0;
+}
+
+.analytics-disclaimer {
+    color: rgba(246, 244, 238, 0.42);
+    font-size: 0.72rem;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+}
+
+/* Closing Message */
+
+.analytics-outcome {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 4rem;
+    text-align: center;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.analytics-outcome span {
+    color: var(--text-primary);
+}
+
+.analytics-outcome strong {
+    color: var(--electric-blue);
+    font-weight: 800;
+}
+
+/* Analytics Responsive */
+
+@media (max-width: 900px) {
+    .analytics-product {
+        grid-template-columns: 1fr;
+    }
+
+    .analytics-main,
+    .analytics-insights {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .analytics-outcomes {
+        padding: 5rem 0;
+    }
+
+    .analytics-outcomes .section-title {
+        font-size: 2rem;
+    }
+
+    .analytics-outcomes .section-subtitle {
+        margin-bottom: 3rem;
+    }
+
+    .analytics-main,
+    .analytics-insights {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+
+    .analytics-panel-header {
+        flex-direction: column;
+        margin-bottom: 2.5rem;
+    }
+
+    .development-axis {
+        font-size: 0.6rem;
+    }
+
+    .analytics-outcome {
+        margin-top: 3rem;
+        font-size: 1.6rem;
+    }
+}
