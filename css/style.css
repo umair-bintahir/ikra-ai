@@ -1058,3 +1058,17 @@ section:nth-child(even) p {
         font-size: 1.6rem;
     }
 }
+
+
+/* Analytics spacing refinement */
+.analytics-outcomes .section-subtitle {
+    margin-bottom: 2.75rem;
+}
+
+.analytics-panel-header {
+    margin-bottom: 2.25rem;
+}
+
+.analytics-outcome {
+    margin-top: 3rem;
+}
