@@ -99,65 +99,58 @@
                 </div>
             </div>
 
-                        <div class="pathway ikra-path">
-                <h3 class="pathway-label">IKRA</h3>
-                <div class="flow-diagram ikra-flow">
-                    <div class="flow-row flow-row-left">
-                        <div class="flow-step">
-                            <span class="flow-node ikra-node">QUESTION</span>
-                        </div>
-                    </div>
-                    
-                    <div class="flow-connector">
-                        <svg viewBox="0 0 40 60" preserveAspectRatio="none">
-                            <path d="M 20 0 Q 10 30 20 60" stroke="var(--electric-blue)" stroke-width="2" fill="none" opacity="0.5"/>
-                        </svg>
-                    </div>
-                    
-                    <div class="flow-row flow-row-right">
-                        <div class="flow-step">
-                            <span class="flow-node ikra-node">INQUIRE</span>
-                        </div>
-                    </div>
-                    
-                    <div class="flow-connector">
-                        <svg viewBox="0 0 40 60" preserveAspectRatio="none">
-                            <path d="M 20 0 Q 30 30 20 60" stroke="var(--electric-blue)" stroke-width="2" fill="none" opacity="0.5"/>
-                        </svg>
-                    </div>
-                    
-                    <div class="flow-row flow-row-left">
-                        <div class="flow-step">
-                            <span class="flow-node ikra-node">EXPLORE</span>
-                        </div>
-                    </div>
-                    
-                    <div class="flow-connector">
-                        <svg viewBox="0 0 40 60" preserveAspectRatio="none">
-                            <path d="M 20 0 Q 10 30 20 60" stroke="var(--electric-blue)" stroke-width="2" fill="none" opacity="0.5"/>
-                        </svg>
-                    </div>
-                    
-                    <div class="flow-row flow-row-right">
-                        <div class="flow-step">
-                            <span class="flow-node ikra-node">REASON</span>
-                        </div>
-                    </div>
-                    
-                    <div class="flow-connector">
-                        <svg viewBox="0 0 40 60" preserveAspectRatio="none">
-                            <path d="M 20 0 Q 30 30 20 60" stroke="var(--electric-blue)" stroke-width="2" fill="none" opacity="0.5"/>
-                        </svg>
-                    </div>
-                    
-                    <div class="flow-row flow-row-left">
-                        <div class="flow-step">
-                            <span class="flow-node ikra-node">REFLECT</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+              <div class="pathway ikra-path">
+    <h3 class="pathway-label">IKRA</h3>
+
+    <div class="evolving-system">
+
+        <!-- Continuous inquiry loop -->
+        <svg class="evolving-loop" viewBox="0 0 600 420" aria-hidden="true">
+            <path
+                class="loop-path"
+                d="M300 55
+                   C430 55 515 145 515 230
+                   C515 330 430 375 300 375
+                   C170 375 85 330 85 230
+                   C85 145 170 55 300 55 Z"
+            />
+        </svg>
+
+        <!-- Central idea -->
+        <div class="think-core">
+            <span>THINK</span>
         </div>
+
+        <!-- Inquiry stages -->
+        <div class="evolving-node node-question">
+            <span>QUESTION</span>
+        </div>
+
+        <div class="evolving-node node-inquire">
+            <span>INQUIRE</span>
+        </div>
+
+        <div class="evolving-node node-explore">
+            <span>EXPLORE</span>
+        </div>
+
+        <div class="evolving-node node-reason">
+            <span>REASON</span>
+        </div>
+
+        <div class="evolving-node node-reflect">
+            <span>REFLECT</span>
+        </div>
+
+        <!-- subtle directional cue -->
+        <div class="loop-direction" aria-hidden="true">↻</div>
+
+    </div>
+
+    <p class="evolving-caption">
+        Each reflection can become the beginning of a new question.
+    </p>
+</div>
 
         <div class="outcome-statement">
             <p class="outcome-line">The outcome is not just a correct answer.</p>
