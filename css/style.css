@@ -2170,3 +2170,52 @@ section:nth-child(even) p {
         min-height: 470px !important;
     }
 }
+
+
+/* Balance Traditional card with IKRA */
+
+.traditional-path {
+    min-height: 520px;
+    justify-content: flex-start;
+}
+
+.traditional-path .pathway-label {
+    margin-bottom: 0;
+}
+
+.traditional-path .flow-diagram {
+    margin-top: 7rem;
+}
+
+.traditional-path::after {
+    content: "Stops at the answer.";
+    position: absolute;
+    left: 50%;
+    bottom: 3.25rem;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    color: rgba(105, 112, 128, 0.72);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .traditional-path {
+        min-height: 420px;
+    }
+
+    .traditional-path .flow-diagram {
+        margin-top: 5rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .traditional-path {
+        min-height: 360px;
+    }
+
+    .traditional-path .flow-diagram {
+        margin-top: 3.5rem;
+    }
+}
