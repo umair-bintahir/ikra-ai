@@ -1938,3 +1938,235 @@ section:nth-child(even) p {
     margin-top: 1rem;
     font-size: 0.86rem;
 }
+
+/* ========================================
+   WHY IKRA — PREMIUM COMPARISON CARDS
+   ======================================== */
+
+/* Balance both comparison panels */
+.learning-pathways {
+    align-items: stretch;
+}
+
+.learning-pathways .pathway {
+    min-height: 520px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+/* ------------------------------
+   TRADITIONAL — LINEAR / FINITE
+   ------------------------------ */
+
+.traditional-path {
+    display: flex;
+    flex-direction: column;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.72),
+            rgba(235,233,228,0.72)
+        );
+    border: 1px solid rgba(20, 24, 33, 0.10);
+    box-shadow:
+        0 20px 45px rgba(11,16,32,0.05),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.traditional-path::before {
+    content: "LINEAR LEARNING";
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.traditional-path::after {
+    content: "Stops at the answer.";
+    position: absolute;
+    left: 50%;
+    bottom: 3.2rem;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    color: rgba(105,112,128,0.72);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.traditional-path .linear-flow {
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* subtle horizontal journey line */
+.traditional-path .linear-flow::before {
+    content: "";
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 50%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(105,112,128,0.22),
+        rgba(105,112,128,0.22),
+        transparent
+    );
+    z-index: 0;
+}
+
+.traditional-path .linear-step {
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 8px 18px rgba(11,16,32,0.035);
+}
+
+/* ------------------------------
+   IKRA — EVOLVING / CONTINUOUS
+   ------------------------------ */
+
+.ikra-path {
+    background:
+        radial-gradient(
+            circle at 50% 52%,
+            rgba(65,105,255,0.12) 0%,
+            rgba(65,105,255,0.045) 32%,
+            transparent 62%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(245,247,255,0.96),
+            rgba(233,237,250,0.88)
+        );
+
+    border: 1px solid rgba(65,105,255,0.28);
+
+    box-shadow:
+        0 24px 55px rgba(65,105,255,0.09),
+        inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+.ikra-path::before {
+    content: "EVOLVING LEARNING";
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--electric-blue);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+/* richer THINK core */
+
+.think-core {
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            rgba(255,255,255,0.9),
+            rgba(65,105,255,0.18) 48%,
+            rgba(65,105,255,0.09) 100%
+        );
+
+    border: 1.5px solid rgba(65,105,255,0.62);
+
+    box-shadow:
+        0 0 0 12px rgba(65,105,255,0.045),
+        0 0 0 24px rgba(65,105,255,0.025),
+        0 15px 40px rgba(65,105,255,0.18);
+}
+
+/* richer orbit */
+
+.loop-path {
+    stroke: rgba(65,105,255,0.52);
+    stroke-width: 2;
+    stroke-dasharray: 5 7;
+}
+
+/* richer stage nodes */
+
+.evolving-node {
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(65,105,255,0.25);
+
+    box-shadow:
+        0 10px 24px rgba(11,16,32,0.07),
+        inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+.evolving-node:hover {
+    border-color: rgba(65,105,255,0.55);
+    box-shadow:
+        0 14px 30px rgba(65,105,255,0.12),
+        0 0 0 4px rgba(65,105,255,0.04);
+}
+
+/* Reflection visually signals continuation */
+
+.node-reflect {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(65,105,255,0.15),
+            rgba(65,105,255,0.06)
+        );
+
+    border-color: rgba(65,105,255,0.42);
+
+    box-shadow:
+        0 10px 26px rgba(65,105,255,0.10),
+        0 0 18px rgba(65,105,255,0.06);
+}
+
+/* caption */
+
+.evolving-caption {
+    color: var(--text-secondary);
+    font-weight: 550;
+}
+
+/* ------------------------------
+   RESPONSIVE
+   ------------------------------ */
+
+@media (max-width: 900px) {
+
+    .learning-pathways .pathway {
+        min-height: auto;
+    }
+
+    .traditional-path {
+        min-height: 360px !important;
+    }
+
+    .traditional-path::after {
+        bottom: 2rem;
+    }
+
+    .ikra-path {
+        min-height: 500px !important;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .learning-pathways .pathway {
+        border-radius: 18px;
+    }
+
+    .traditional-path {
+        min-height: 330px !important;
+    }
+
+    .ikra-path {
+        min-height: 470px !important;
+    }
+}
