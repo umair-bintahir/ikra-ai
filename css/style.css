@@ -2219,3 +2219,55 @@ section:nth-child(even) p {
         margin-top: 3.5rem;
     }
 }
+
+
+/* IKRA comparison — theme refinement */
+
+.ikra-card,
+.ikra-path {
+    background: #0b1020;
+    border-color: rgba(65, 105, 255, 0.45);
+    box-shadow: 0 24px 60px rgba(11, 16, 32, 0.18);
+}
+
+.ikra-card h3,
+.ikra-path h3 {
+    color: #f7f4ed;
+}
+
+.ikra-card .comparison-eyebrow,
+.ikra-path .comparison-eyebrow {
+    color: #4169ff;
+}
+
+.ikra-card .journey-step,
+.ikra-path .journey-step {
+    background: #11182b;
+    color: #f7f4ed;
+    border-color: rgba(65, 105, 255, 0.45);
+}
+
+.ikra-card .journey-step.active,
+.ikra-path .journey-step.active {
+    color: #4169ff;
+    border-color: #4169ff;
+    background: rgba(65, 105, 255, 0.12);
+}
+
+.ikra-card .journey-center,
+.ikra-path .journey-center {
+    background: rgba(65, 105, 255, 0.14);
+    border-color: #4169ff;
+    color: #4169ff;
+    box-shadow: 0 0 35px rgba(65, 105, 255, 0.22);
+}
+
+.ikra-card .journey-orbit,
+.ikra-path .journey-orbit {
+    border-color: rgba(65, 105, 255, 0.45);
+}
+
+.ikra-card .journey-note,
+.ikra-path .journey-note {
+    color: #aeb6c8;
+}
