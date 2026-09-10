@@ -1500,3 +1500,177 @@ section:nth-child(even) p {
         text-align: left;
     }
 }
+
+
+/* ========================================
+   WHY IKRA SECTION
+   ======================================== */
+
+.why-ikra {
+    background-color: var(--warm-white);
+    padding: 7rem 0;
+}
+
+.why-ikra .section-title {
+    max-width: 1100px;
+    margin: 0 auto 1.25rem;
+    color: var(--text-primary);
+    font-size: clamp(2.4rem, 4vw, 3.4rem);
+    line-height: 1.15;
+}
+
+.why-ikra .section-subtitle {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    color: var(--text-secondary);
+}
+
+.comparison-visual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    margin-top: 2rem;
+}
+
+.pathway {
+    padding: 2.5rem;
+    border-radius: 16px;
+}
+
+.traditional-path {
+    background-color: rgba(20, 24, 33, 0.035);
+    border: 1px solid rgba(20, 24, 33, 0.08);
+}
+
+.ikra-path {
+    background-color: rgba(65, 105, 255, 0.05);
+    border: 1px solid rgba(65, 105, 255, 0.18);
+}
+
+.pathway-label {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+.flow-diagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.flow-node {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+.traditional-path .flow-node {
+    background-color: rgba(20, 24, 33, 0.06);
+    color: var(--text-secondary);
+}
+
+.flow-arrow {
+    color: rgba(20, 24, 33, 0.3);
+    font-size: 1.3rem;
+}
+
+/* IKRA journey */
+
+.ikra-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+}
+
+.flow-row {
+    display: flex;
+    width: 100%;
+}
+
+.flow-row-left {
+    justify-content: flex-start;
+}
+
+.flow-row-right {
+    justify-content: flex-end;
+}
+
+.ikra-node {
+    background-color: var(--electric-blue);
+    color: #ffffff;
+    min-width: 135px;
+}
+
+.flow-connector {
+    width: 46px;
+    height: 58px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.flow-connector svg {
+    display: block;
+    width: 46px;
+    height: 58px;
+    max-width: 46px;
+    max-height: 58px;
+}
+
+.outcome-statement {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.outcome-line {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+.outcome-highlight {
+    margin-top: 0.4rem;
+    color: var(--electric-blue);
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .comparison-visual {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .why-ikra {
+        padding: 5rem 0;
+    }
+
+    .pathway {
+        padding: 1.5rem;
+    }
+
+    .traditional-path .flow-diagram {
+        flex-direction: column;
+    }
+
+    .traditional-path .flow-arrow {
+        transform: rotate(90deg);
+    }
+
+    .ikra-node {
+        min-width: 115px;
+    }
+}
