@@ -1881,3 +1881,60 @@ section:nth-child(even) p {
         left: 8%;
     }
 }
+
+
+/* Tighten evolving IKRA system */
+
+.evolving-system {
+    min-height: 340px;
+}
+
+.evolving-loop {
+    inset: 8% 8% 6%;
+    width: 84%;
+    height: 86%;
+}
+
+.loop-path {
+    stroke: rgba(65, 105, 255, 0.42);
+    stroke-width: 2.2;
+    stroke-dasharray: 6 8;
+}
+
+.think-core {
+    width: 105px;
+    height: 105px;
+}
+
+.node-question {
+    top: 2%;
+}
+
+.node-inquire {
+    top: 27%;
+    right: 4%;
+}
+
+.node-explore {
+    bottom: 5%;
+    right: 16%;
+}
+
+.node-reason {
+    bottom: 5%;
+    left: 16%;
+}
+
+.node-reflect {
+    top: 27%;
+    left: 4%;
+}
+
+.loop-direction {
+    display: none;
+}
+
+.evolving-caption {
+    margin-top: 1rem;
+    font-size: 0.86rem;
+}
