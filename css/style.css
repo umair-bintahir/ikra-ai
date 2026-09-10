@@ -2271,3 +2271,61 @@ section:nth-child(even) p {
 .ikra-path .journey-note {
     color: #aeb6c8;
 }
+
+
+/* IKRA comparison — light theme refinement */
+
+.ikra-card,
+.ikra-path {
+    background:
+        radial-gradient(circle at 55% 55%, rgba(65, 105, 255, 0.10), transparent 38%),
+        linear-gradient(145deg, #f5f7ff 0%, #edf1ff 100%);
+    border-color: rgba(65, 105, 255, 0.30);
+    box-shadow: 0 24px 60px rgba(40, 60, 120, 0.12);
+}
+
+.ikra-card h3,
+.ikra-path h3 {
+    color: #111827;
+}
+
+.ikra-card .comparison-eyebrow,
+.ikra-path .comparison-eyebrow {
+    color: #4169ff;
+}
+
+.ikra-card .journey-step,
+.ikra-path .journey-step {
+    background: rgba(255, 255, 255, 0.88);
+    color: #111827;
+    border-color: rgba(65, 105, 255, 0.25);
+    box-shadow: 0 8px 24px rgba(40, 60, 120, 0.08);
+}
+
+.ikra-card .journey-step.active,
+.ikra-path .journey-step.active {
+    color: #4169ff;
+    border-color: rgba(65, 105, 255, 0.55);
+    background: rgba(65, 105, 255, 0.08);
+}
+
+.ikra-card .journey-center,
+.ikra-path .journey-center {
+    background:
+        radial-gradient(circle at 50% 35%, #ffffff 0%, #dce5ff 35%, #c5d2ff 100%);
+    border-color: #4169ff;
+    color: #4169ff;
+    box-shadow:
+        0 0 0 14px rgba(65, 105, 255, 0.05),
+        0 0 40px rgba(65, 105, 255, 0.20);
+}
+
+.ikra-card .journey-orbit,
+.ikra-path .journey-orbit {
+    border-color: rgba(65, 105, 255, 0.45);
+}
+
+.ikra-card .journey-note,
+.ikra-path .journey-note {
+    color: #667085;
+}
