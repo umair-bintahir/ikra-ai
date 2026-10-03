@@ -2986,3 +2986,121 @@ section:nth-child(even) p {
         radial-gradient(
             circle at 15% 15%,
             rgba(65, 105, 255, 
+
+
+                 /* =========================================================
+   IKRA INQUIRY ENGINE — VISIBILITY + CONTRAST FIX
+   ========================================================= */
+
+/* Main section heading */
+.inquiry-engine .section-title,
+.inquiry-engine h2,
+.engine-heading h2 {
+    color: #f7f5ef !important;
+}
+
+.inquiry-engine .section-subtitle,
+.engine-heading p {
+    color: rgba(247, 245, 239, 0.78) !important;
+}
+
+/* Main white engine card */
+.engine-shell {
+    background: #ffffff !important;
+    color: #111827 !important;
+}
+
+/* LEFT SIDE — journey */
+.engine-journey {
+    color: #111827 !important;
+}
+
+.engine-journey h3,
+.engine-journey h4,
+.engine-journey strong {
+    color: #111827 !important;
+}
+
+.engine-journey p {
+    color: #667085 !important;
+}
+
+/* Journey stage labels */
+.engine-journey .stage-number,
+.engine-journey .step-number {
+    color: #667085 !important;
+}
+
+.engine-journey .stage-label,
+.engine-journey .step-label {
+    color: #111827 !important;
+}
+
+.engine-journey .stage-title,
+.engine-journey .step-title {
+    color: #4169ff !important;
+}
+
+/* RIGHT SIDE — AI layer */
+.engine-ai,
+.ai-layer,
+.engine-intelligence {
+    color: #111827 !important;
+}
+
+.engine-ai h3,
+.engine-ai h4,
+.ai-layer h3,
+.ai-layer h4,
+.engine-intelligence h3,
+.engine-intelligence h4 {
+    color: #111827 !important;
+}
+
+.engine-ai p,
+.ai-layer p,
+.engine-intelligence p {
+    color: #667085 !important;
+}
+
+.engine-ai strong,
+.ai-layer strong,
+.engine-intelligence strong {
+    color: #111827 !important;
+}
+
+/* Blue emphasis */
+.engine-shell .accent,
+.engine-shell .highlight,
+.engine-shell .blue-text {
+    color: #4169ff !important;
+}
+
+/* Make general text inside white panel readable */
+.engine-shell p {
+    color: #667085;
+}
+
+.engine-shell h3,
+.engine-shell h4,
+.engine-shell h5,
+.engine-shell strong {
+    color: #111827;
+}
+
+/* Eyebrows stay IKRA blue */
+.engine-shell .eyebrow,
+.engine-shell [class*="eyebrow"] {
+    color: #4169ff !important;
+}
+
+/* Bottom continuation */
+.inquiry-engine .cycle-continues,
+.inquiry-engine .engine-outcome {
+    color: #f7f5ef;
+}
+
+.inquiry-engine .cycle-continues p,
+.inquiry-engine .engine-outcome p {
+    color: rgba(247, 245, 239, 0.78) !important;
+}
