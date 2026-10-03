@@ -3901,3 +3901,7 @@ section:nth-child(even) p {
         margin-top: 12px;
     }
 }
+
+html {
+    border: 15px solid lime !important;
+}
