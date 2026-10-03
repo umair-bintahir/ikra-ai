@@ -3903,7 +3903,8 @@ section:nth-child(even) p {
 }
 
 .ikra-engine-v2 {
-    border: 15px solid lime !important;
+    background: red !important;
+}
 }
 }
 }
